@@ -23,7 +23,7 @@ export default defineConfig({
             meta: [
               {
                 key: "Essential Blocks - Test Report",
-                value: "<https://hurayraiit.github.io/essential-blocks-demopage-test-automation/ | 📂 Click Here!>",
+                value: "<https://hurayraiit.github.io/playwright-automation-essential-blocks/ | 📂 Click Here!>",
               },
             ],
           },

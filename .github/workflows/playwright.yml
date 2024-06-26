@@ -44,7 +44,7 @@ jobs:
           path: playwright-report/
           retention-days: 30
 
-      - name: Publish HTML report to GitHub Pages (https://hurayraiit.github.io/essential-blocks-demopage-test-automation)
+      - name: Publish HTML report to GitHub Pages (https://hurayraiit.github.io/playwright-automation-essential-blocks)
         if: always()
         uses: peaceiris/actions-gh-pages@v4
         with:
