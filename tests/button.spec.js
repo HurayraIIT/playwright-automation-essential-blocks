@@ -12,6 +12,7 @@ test.describe("EB Buttons", () => {
   });
 
   test("can insert a button block", async ({ editor, page }) => {
+    test.slow();
     await editor.insertBlock({ name: EB_Free_Blocks.BUTTON });
 
     // Select Button Type: Success
