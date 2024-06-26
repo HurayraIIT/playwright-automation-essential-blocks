@@ -1,18 +1,12 @@
 "use strict";
-import { test, expect } from "../global-setup";
+import { test, expect } from "@wordpress/e2e-test-utils-playwright";
 
-let slug = "/demo/accordion";
-let heading = "Accordion";
-
-test.describe("Accordion", () => {
-  test.beforeEach(async ({ page }) => {
-    await page.goto(slug);
-    console.log(page.url());
-    await expect(page.getByRole("heading", { name: "Accordion", exact: true })).toBeVisible();
-  });
-
-  test("has title", async ({ page }) => {
-    // Expect a title "to contain" a substring.
-    await expect(page).toHaveTitle(/Accordion | Essential Gutenberg Blocks for WordPress/);
-  });
+test("demo test", async ({ page, admin, editor }) => {
+  await admin.visitAdminPage("/");
+  await admin.createNewPost();
+  // insert block named essential-blocks/accordion
+  await editor.insertBlock({ name: "essential-blocks/accordion" });
+  await editor.publishPost();
+  const content = await editor.getEditedPostContent();
+  console.log(content);
 });

@@ -1,12 +1,12 @@
 // @ts-check
 import { defineConfig, devices } from "@playwright/test";
 import { config } from "dotenv";
-import { test } from "./global-setup";
 
 config();
 
 export default defineConfig({
   testDir: "./tests",
+  globalSetup: "./global-setup.js",
   fullyParallel: true,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 2 : 4,
@@ -22,7 +22,7 @@ export default defineConfig({
             maxNumberOfFailuresToShow: 0,
             meta: [
               {
-                key: "Essential Blocks Demo - Test Report",
+                key: "Essential Blocks - Test Report",
                 value: "<https://hurayraiit.github.io/essential-blocks-demopage-test-automation/ | 📂 Click Here!>",
               },
             ],
@@ -33,31 +33,37 @@ export default defineConfig({
     : [["dot"], ["list"], ["html"]],
 
   use: {
-    baseURL: process.env.BASE_URL,
+    baseURL: process.env.WP_BASE_URL,
+    storageState: process.env.WP_AUTH_STORAGE,
     testIdAttribute: "data-id",
 
     screenshot: "on",
     trace: "retain-on-failure",
-    video: "retain-on-failure",
+    video: "on-first-retry",
 
     ignoreHTTPSErrors: true,
+    locale: "en-US",
+    contextOptions: {
+      reducedMotion: "reduce",
+      strictSelectors: true,
+    },
   },
 
   /* Configure projects for major browsers */
   projects: [
     {
       name: "chromium",
-      use: { ...devices["Desktop Chrome"], ...test },
+      use: { ...devices["Desktop Chrome"] },
     },
 
     {
       name: "firefox",
-      use: { ...devices["Desktop Firefox"], ...test },
+      use: { ...devices["Desktop Firefox"] },
     },
 
     {
       name: "webkit",
-      use: { ...devices["Desktop Safari"], ...test },
+      use: { ...devices["Desktop Safari"] },
     },
   ],
 });
