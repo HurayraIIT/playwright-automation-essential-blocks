@@ -1,0 +1,63 @@
+// @ts-check
+import { defineConfig, devices } from "@playwright/test";
+import { config } from "dotenv";
+import { test } from "./global-setup";
+
+config();
+
+export default defineConfig({
+  testDir: "./tests",
+  fullyParallel: true,
+  retries: process.env.CI ? 2 : 0,
+  workers: process.env.CI ? 2 : 4,
+  timeout: 30 * 1000,
+
+  reporter: process.env.CI
+    ? [
+        [
+          "./node_modules/playwright-slack-report/dist/src/SlackReporter.js",
+          {
+            slackWebHookUrl: process.env.SLACK_WEBHOOK_URL,
+            sendResults: "always", // "always" , "on-failure", "off"
+            maxNumberOfFailuresToShow: 0,
+            meta: [
+              {
+                key: "Essential Blocks Demo - Test Report",
+                value: "<https://hurayraiit.github.io/essential-blocks-demopage-test-automation/ | 📂 Click Here!>",
+              },
+            ],
+          },
+        ],
+        ["html"],
+      ]
+    : [["dot"], ["list"], ["html"]],
+
+  use: {
+    baseURL: process.env.BASE_URL,
+    testIdAttribute: "data-id",
+
+    screenshot: "on",
+    trace: "retain-on-failure",
+    video: "retain-on-failure",
+
+    ignoreHTTPSErrors: true,
+  },
+
+  /* Configure projects for major browsers */
+  projects: [
+    {
+      name: "chromium",
+      use: { ...devices["Desktop Chrome"], ...test },
+    },
+
+    {
+      name: "firefox",
+      use: { ...devices["Desktop Firefox"], ...test },
+    },
+
+    {
+      name: "webkit",
+      use: { ...devices["Desktop Safari"], ...test },
+    },
+  ],
+});
