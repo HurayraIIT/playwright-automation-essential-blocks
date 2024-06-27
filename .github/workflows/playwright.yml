@@ -30,8 +30,12 @@ jobs:
 
       - name: Set up environment variables
         run: |
-          echo "BASE_URL=${{ secrets.BASE_URL }}" >> .env
+          echo "PERSONAL_ACCESS_TOKEN=${{ secrets.PERSONAL_ACCESS_TOKEN }}" >> .env
           echo "SLACK_WEBHOOK_URL=${{ secrets.SLACK_WEBHOOK_URL }}" >> .env
+          echo "WP_AUTH_STORAGE=${{ secrets.WP_AUTH_STORAGE }}" >> .env
+          echo "WP_BASE_URL=${{ secrets.WP_BASE_URL }}" >> .env
+          echo "WP_PASSWORD=${{ secrets.WP_PASSWORD }}" >> .env
+          echo "WP_USERNAME=${{ secrets.WP_USERNAME }}" >> .env
 
       - name: Run Playwright tests
         run: npx playwright test
