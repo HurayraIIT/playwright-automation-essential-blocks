@@ -7,10 +7,6 @@ test.describe("EB Buttons", () => {
     await admin.createNewPost({ postType: "post", title: "EB Buttons" });
   });
 
-  test.afterAll(async ({ requestUtils }) => {
-    await requestUtils.deleteAllPosts();
-  });
-
   test("can insert a button block", async ({ editor, page }) => {
     test.slow();
     await editor.insertBlock({ name: EB_Free_Blocks.BUTTON });

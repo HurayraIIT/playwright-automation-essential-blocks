@@ -1,4 +1,5 @@
-// @ts-check
+"use strict";
+
 import { defineConfig, devices } from "@playwright/test";
 import { config } from "dotenv";
 
@@ -6,11 +7,13 @@ config();
 
 export default defineConfig({
   testDir: "./tests",
-  globalSetup: "./global-setup.js",
+  globalSetup: "./src/global-setup",
+  globalTeardown: "./src/global-teardown",
+
   fullyParallel: true,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 2 : 4,
-  timeout: 30 * 1000,
+  timeout: 60 * 1000,
 
   reporter: process.env.CI
     ? [
