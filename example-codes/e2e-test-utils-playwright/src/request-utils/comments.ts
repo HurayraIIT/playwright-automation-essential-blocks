@@ -22,7 +22,7 @@ export interface User {
 /**
  * Create new comment using the REST API.
  *
- * @param this
+ * @param this 
  * @param payload
  */
 export async function createComment(

@@ -11,7 +11,7 @@ export default async function globalTeardown() {
 
   // https://playwright.dev/docs/test-global-setup-teardown#example
   await requestUtils.setupRest();
-  await requestUtils.deleteAllPosts();
+  // await requestUtils.deleteAllPosts();
   await requestContext.dispose();
 
   console.log("Global teardown has been completed.");
