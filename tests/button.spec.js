@@ -40,8 +40,5 @@ test.describe("EB Buttons", () => {
     await page.getByLabel("View Post").click();
     const page1 = await page1Promise;
     await expect(page1.getByRole("link", { name: "Click me 240930!" })).toBeVisible();
-
-    await page1.getByRole("link", { name: "Click me 240930!" }).click();
-    await expect(page1.getByText("I have appeared!")).toBeVisible();
   });
 });

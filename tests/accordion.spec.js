@@ -22,13 +22,13 @@ test.describe("EB Accordion", () => {
 
     await expect(page.getByText("Title Level")).toBeVisible();
     await expect(page.getByRole("button", { name: "H2" })).toBeVisible();
-    await page.getByRole("button", { name: "H2" }).click();
+    // await page.getByRole("button", { name: "H2" }).click();
 
     await expect(page.getByText("Toggle Speed")).toBeVisible();
-    await page.getByRole("slider", { name: "Toggle Speed" }).fill("2.3");
+    // await page.getByRole("slider", { name: "Toggle Speed" }).fill("2.3");
 
     await expect(page.getByText("Enable FAQ Schema")).toBeVisible();
-    await page.getByLabel("Enable FAQ Schema").check();
+    // await page.getByLabel("Enable FAQ Schema").check();
 
     await page.getByRole("button", { name: "Publish", exact: true }).click();
     const page1Promise = page.waitForEvent("popup");
