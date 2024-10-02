@@ -12,8 +12,8 @@ export default defineConfig({
 
   fullyParallel: true,
   retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 2 : 4,
-  timeout: 40 * 1000,
+  workers: process.env.CI ? 2 : 2,
+  timeout: 30 * 1000,
 
   reporter: [["dot"], ["list"], ["html"]],
 
@@ -41,14 +41,14 @@ export default defineConfig({
       use: { ...devices["Desktop Chrome"] },
     },
 
-    // {
-    //   name: "firefox",
-    //   use: { ...devices["Desktop Firefox"] },
-    // },
+    {
+      name: "firefox",
+      use: { ...devices["Desktop Firefox"] },
+    },
 
-    // {
-    //   name: "webkit",
-    //   use: { ...devices["Desktop Safari"] },
-    // },
+    {
+      name: "webkit",
+      use: { ...devices["Desktop Safari"] },
+    },
   ],
 });

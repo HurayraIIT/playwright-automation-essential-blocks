@@ -4,11 +4,8 @@ import { EB_Free_Blocks } from "../helpers/block-names";
 import generateTimestamp from "../helpers/generator";
 
 test.describe("EB Advanced Heading", () => {
-  test.beforeEach(async ({ admin }) => {
+  test("can insert an Advanced Heading block", async ({ admin, editor, page }) => {
     await admin.createNewPost({ postType: "post", title: `EB Advanced Heading ${generateTimestamp()}` });
-  });
-
-  test("can insert an Advanced Heading block", async ({ editor, page }) => {
     await editor.insertBlock({ name: EB_Free_Blocks.ADVANCED_HEADING });
 
     await expect(page.getByText("Essential Blocks Advanced Heading")).toBeVisible();

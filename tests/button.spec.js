@@ -4,11 +4,8 @@ import { EB_Free_Blocks } from "../helpers/block-names";
 import generateTimestamp from "../helpers/generator";
 
 test.describe("EB Buttons", () => {
-  test.beforeEach(async ({ admin }) => {
-    await admin.createNewPost({ postType: "post", title: `EB Button ${generateTimestamp()}` });
-  });
-
-  test("can insert a button block", async ({ editor, page }) => {
+  test("can insert a Button block", async ({ admin, editor, page }) => {
+    await admin.createNewPost({ postType: "post", title: `EB` });
     await editor.insertBlock({ name: EB_Free_Blocks.BUTTON });
 
     // Type the URL

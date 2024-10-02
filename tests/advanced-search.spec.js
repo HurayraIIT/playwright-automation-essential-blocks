@@ -4,12 +4,8 @@ import { EB_PRO_Blocks } from "../helpers/block-names";
 import generateTimestamp from "../helpers/generator";
 
 test.describe("EB Advanced Search", () => {
-  test.beforeEach(async ({ admin }) => {
-    await admin.visitAdminPage('plugins.php');
+  test("can insert an Advanced Search block", async ({ admin, editor, page }) => {
     await admin.createNewPost({ postType: "post", title: `EB Advanced Search ${generateTimestamp()}` });
-  });
-
-  test("can insert an Advanced Search block", async ({ editor, page }) => {
     await editor.insertBlock({ name: EB_PRO_Blocks.ADVANCED_SEARCH });
 
     await expect(page.getByLabel("Block: Advanced Search").locator("form")).toBeVisible();

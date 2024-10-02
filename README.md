@@ -33,6 +33,12 @@ Usually after Playwright update, browsers need to be updated with command:
 npx playwright install --with-deps
 ```
 
+Update the package
+
+```
+npm install @wordpress/e2e-test-utils-playwright
+```
+
 ## Project Setup
 
 Step 01: Clone the repository:
