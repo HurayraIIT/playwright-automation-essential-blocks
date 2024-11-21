@@ -21,7 +21,6 @@ test.describe("EB Breadcrumbs", () => {
     const page1 = await page1Promise;
 
     //checking block visibility in post
-
-    
+    await expect(page1.locator("div.eb-breadcrumb").getByText("EB Breadcrumbs 2")).toBeVisible();
   });
 });
