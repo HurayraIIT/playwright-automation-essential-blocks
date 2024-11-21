@@ -65,7 +65,19 @@ const EB_PRO_Blocks = Object.freeze({
   ADVANCED_SEARCH: "essential-blocks/pro-advanced-search",
   DATA_TABLE: "essential-blocks/pro-data-table",
   FANCY_CHART: "essential-blocks/pro-fancy-chart",
-  // TODO: Add more pro blocks here
+  FORM_DATETIME_PICKER:"essential-blocks/pro-form-datetime-picker",
+  FORM_RECAPTCHA:"essential-blocks/pro-form-recaptcha",
+  MULTICOLUMN_PRICING_TABLE:"essential-blocks/pro-multicolumn-pricing-table",
+  NEWS_TICKER:"essential-blocks/pro-news-ticker",
+  OFF_CANVAS:"essential-blocks/pro-off-canvas",
+  PRICING_CELL:"essential-blocks/pro-pricing-cell",
+  PRICING_COLUMN:"essential-blocks/pro-pricing-column",
+  STACKED_CARDS:"essential-blocks/pro-stacked-cards",
+  TESTIMONIAL_SLIDER:"essential-blocks/pro-testimonial-slider",
+  TIMELINE_SLIDER:"essential-blocks/pro-timeline-slider",
+  WOO_PRODUCT_CAROUSEL:"essential-blocks/pro-woo-product-carousel",
+
+  // TODO: Add more pro blocks here {countdown, post carousel, post grid, woo product grid}
 });
 
 export { EB_Free_Blocks, EB_PRO_Blocks };
