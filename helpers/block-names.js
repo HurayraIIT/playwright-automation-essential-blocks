@@ -5,14 +5,14 @@
 
 const EB_Free_Blocks = Object.freeze({
   ACCORDION_ITEM: "essential-blocks/accordion-item",
-  ACCORDION: "essential-blocks/accordion",
-  ADVANCED_HEADING: "essential-blocks/advanced-heading",
+  ACCORDION: "essential-blocks/accordion", // done
+  ADVANCED_HEADING: "essential-blocks/advanced-heading", //done
   ADVANCED_IMAGE: "essential-blocks/advanced-image",
-  ADVANCED_NAVIGATION: "essential-blocks/advanced-navigation",
-  ADVANCED_TABS: "essential-blocks/advanced-tabs",
+  ADVANCED_NAVIGATION: "essential-blocks/advanced-navigation", //done
+  ADVANCED_TABS: "essential-blocks/advanced-tabs", //done
   ADVANCED_VIDEO: "essential-blocks/advanced-video",
   BUTTON: "essential-blocks/button",
-  BREADCRUMBS: "essential-blocks/breadcrumbs",
+  BREADCRUMBS: "essential-blocks/breadcrumbs", //done
   CALL_TO_ACTION: "essential-blocks/call-to-action",
   COLUMN: "essential-blocks/column",
   COUNTDOWN: "essential-blocks/countdown",
