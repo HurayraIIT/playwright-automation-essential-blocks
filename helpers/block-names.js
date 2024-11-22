@@ -11,7 +11,7 @@ const EB_Free_Blocks = Object.freeze({
   ADVANCED_NAVIGATION: "essential-blocks/advanced-navigation", //done
   ADVANCED_TABS: "essential-blocks/advanced-tabs", //done
   ADVANCED_VIDEO: "essential-blocks/advanced-video",
-  BUTTON: "essential-blocks/button",
+  BUTTON: "essential-blocks/button", //done
   BREADCRUMBS: "essential-blocks/breadcrumbs", //done
   CALL_TO_ACTION: "essential-blocks/call-to-action", //done
   COLUMN: "essential-blocks/column",
@@ -32,7 +32,7 @@ const EB_Free_Blocks = Object.freeze({
   ICON: "essential-blocks/icon",
   IMAGE_COMPARISON: "essential-blocks/image-comparison",
   IMAGE_GALLERY: "essential-blocks/image-gallery",
-  INFOBOX: "essential-blocks/infobox",
+  INFOBOX: "essential-blocks/infobox", //done
   INSTAGRAM_FEED: "essential-blocks/instagram-feed",
   INTERACTIVE_PROMO: "essential-blocks/interactive-promo",
   NFT_GALLERY: "essential-blocks/nft-gallery",
