@@ -15,7 +15,7 @@ const EB_Free_Blocks = Object.freeze({
   BREADCRUMBS: "essential-blocks/breadcrumbs", //done
   CALL_TO_ACTION: "essential-blocks/call-to-action", //done
   COLUMN: "essential-blocks/column",
-  COUNTDOWN: "essential-blocks/countdown",
+  COUNTDOWN: "essential-blocks/countdown", //done
   DUAL_BUTTON: "essential-blocks/dual-button",
   FEATURE_LIST: "essential-blocks/feature-list", //done
   FLIPBOX: "essential-blocks/flipbox",
