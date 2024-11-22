@@ -22,10 +22,11 @@ test.describe("EB Advanced Tabs", () => {
     const page1 = await page1Promise;
 
     //checking block visibility in post
-    await expect(page.getByLabel('Editor content').getByText('Tab Title 1')).toBeVisible();
-    await expect(page.getByLabel('Editor content').getByText('Tab Title 2')).toBeVisible();
-    await expect(page.getByLabel('Editor content').getByText('Tab Title 3')).toBeVisible();
+    await expect(page1.locator('h1:has-text("EB Advanced Tabs 2")')).toBeVisible();
 
-    await expect(page1.getByText("EB Advanced Tabs 2")).toBeVisible();
+    await expect(page1.getByText('Tab Title 1')).toBeVisible();
+    await expect(page1.getByText('Tab Title 2')).toBeVisible();
+    await expect(page1.getByText('Tab Title 3')).toBeVisible();
+
   });
 });

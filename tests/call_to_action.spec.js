@@ -20,8 +20,9 @@ test.describe("EB Call TO Action", () => {
     const page1 = await page1Promise;
 
     //checking block visibility in post
-    await expect(page.getByLabel('Editor content').getByText('Essential Blocks for Gutenberg')).toBeVisible();
+    await expect(page1.locator('h1:has-text("EB Call TO Action 2")')).toBeVisible();
+    await expect(page.getByText('Essential Blocks for Gutenberg')).toBeVisible();
 
-    await expect(page1.getByText("EB Call TO Action 2")).toBeVisible();
+
   });
 });

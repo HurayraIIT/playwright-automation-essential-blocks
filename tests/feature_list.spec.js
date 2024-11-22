@@ -22,10 +22,10 @@ test.describe("EB Feature List", () => {
     const page1 = await page1Promise;
 
     //checking block visibility in post
-    await expect(page.getByLabel('Editor content').getByText('Feature Item 1')).toBeVisible();
-    await expect(page.getByLabel('Editor content').getByText('Feature Item 2')).toBeVisible();
-    await expect(page.getByLabel('Editor content').getByText('Feature Item 3')).toBeVisible();
+    await expect(page1.locator('h1:has-text("EB Feature List 2")')).toBeVisible();
+    await expect(page1.getByText('Feature Item 1')).toBeVisible();
+    await expect(page1.getByText('Feature Item 2')).toBeVisible();
+    await expect(page1.getByText('Feature Item 3')).toBeVisible();
     
-    await expect(page1.getByText("EB Feature List 2")).toBeVisible();
   });
 });

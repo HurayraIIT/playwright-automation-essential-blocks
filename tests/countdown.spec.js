@@ -25,7 +25,8 @@ test.describe("EB Countdown", () => {
     const page1 = await page1Promise;
 
     //checking block visibility in post
-    await expect(page1.getByText("EB Countdown 2")).toBeVisible();
+    await expect(page1.locator('h1:has-text("EB Countdown 2")')).toBeVisible();
+
     await expect(page1.getByText("Days")).toBeVisible();
     await expect(page1.getByText("Hours")).toBeVisible();
     await expect(page1.getByText("Minutes")).toBeVisible();
