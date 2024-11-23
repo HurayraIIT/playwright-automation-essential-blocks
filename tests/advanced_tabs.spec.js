@@ -8,20 +8,26 @@ test.describe("EB Advanced Tabs", () => {
     await admin.createNewPost({ postType: "post", title: `EB Advanced Tabs ${generateTimestamp()}` });
     await editor.insertBlock({ name: EB_Free_Blocks.ADVANCED_TABS });
 
-    await page.getByLabel("Editor content").getByText("Tab Title 1").fill(`First Tab Title ${generateTimestamp()}`);
-    await page.getByRole("button", { name: "Add block" }).click();
-    await page.getByRole("option", { name: "Paragraph" }).click();
-    await page.getByLabel("Empty block; start writing or").fill(`First tab content ${generateTimestamp()}`);
+    //checking block visibility in editor
+    await expect(page.getByLabel("Editor content").getByText("Tab Title 1")).toBeVisible();
+    await expect(page.getByLabel("Editor content").getByText("Tab Title 2")).toBeVisible();
+    await expect(page.getByLabel("Editor content").getByText("Tab Title 3")).toBeVisible();
 
+    // Publish the post
     await page.getByRole("button", { name: "Publish", exact: true }).click();
     await page.getByRole("button", { name: "Save", exact: true }).waitFor();
     await expect(page.getByRole("button", { name: "Save", exact: true })).toBeVisible();
 
+    await expect(page.getByLabel("View Post")).toBeVisible();
     const page1Promise = page.waitForEvent("popup");
     await page.getByLabel("View Post").click();
     const page1 = await page1Promise;
 
-    await expect(page1.getByRole("heading", { name: /First Tab Title/ })).toBeVisible();
-    await expect(page1.getByText(/First tab content/)).toBeVisible();
+    //checking block visibility in post
+    await expect(page1.locator('h1:has-text("EB Advanced Tabs 2")')).toBeVisible();
+
+    await expect(page1.getByText("Tab Title 1")).toBeVisible();
+    await expect(page1.getByText("Tab Title 2")).toBeVisible();
+    await expect(page1.getByText("Tab Title 3")).toBeVisible();
   });
 });

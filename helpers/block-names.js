@@ -5,20 +5,20 @@
 
 const EB_Free_Blocks = Object.freeze({
   ACCORDION_ITEM: "essential-blocks/accordion-item",
-  ACCORDION: "essential-blocks/accordion",
-  ADVANCED_HEADING: "essential-blocks/advanced-heading",
+  ACCORDION: "essential-blocks/accordion", // done
+  ADVANCED_HEADING: "essential-blocks/advanced-heading", //done
   ADVANCED_IMAGE: "essential-blocks/advanced-image",
-  ADVANCED_NAVIGATION: "essential-blocks/advanced-navigation",
-  ADVANCED_TABS: "essential-blocks/advanced-tabs",
+  ADVANCED_NAVIGATION: "essential-blocks/advanced-navigation", //done
+  ADVANCED_TABS: "essential-blocks/advanced-tabs", //done
   ADVANCED_VIDEO: "essential-blocks/advanced-video",
-  BUTTON: "essential-blocks/button",
-  BREADCRUMBS: "essential-blocks/breadcrumbs",
-  CALL_TO_ACTION: "essential-blocks/call-to-action",
+  BUTTON: "essential-blocks/button", //done
+  BREADCRUMBS: "essential-blocks/breadcrumbs", //done
+  CALL_TO_ACTION: "essential-blocks/call-to-action", //done
   COLUMN: "essential-blocks/column",
-  COUNTDOWN: "essential-blocks/countdown",
+  COUNTDOWN: "essential-blocks/countdown", //done
   DUAL_BUTTON: "essential-blocks/dual-button",
-  FEATURE_LIST: "essential-blocks/feature-list",
-  FLIPBOX: "essential-blocks/flipbox",
+  FEATURE_LIST: "essential-blocks/feature-list", //done
+  FLIPBOX: "essential-blocks/flipbox", //done
   FLUENT_FORMS: "essential-blocks/fluent-forms",
   FORM_CHECKBOX_FIELD: "essential-blocks/form-checkbox-field",
   FORM_EMAIL_FIELD: "essential-blocks/form-email-field",
@@ -32,19 +32,19 @@ const EB_Free_Blocks = Object.freeze({
   ICON: "essential-blocks/icon",
   IMAGE_COMPARISON: "essential-blocks/image-comparison",
   IMAGE_GALLERY: "essential-blocks/image-gallery",
-  INFOBOX: "essential-blocks/infobox",
+  INFOBOX: "essential-blocks/infobox", //done
   INSTAGRAM_FEED: "essential-blocks/instagram-feed",
   INTERACTIVE_PROMO: "essential-blocks/interactive-promo",
   NFT_GALLERY: "essential-blocks/nft-gallery",
-  NOTICE: "essential-blocks/notice",
-  NUMBER_COUNTER: "essential-blocks/number-counter",
+  NOTICE: "essential-blocks/notice", //done
+  NUMBER_COUNTER: "essential-blocks/number-counter", //done
   OPENVERSE: "essential-blocks/openverse",
   PARALLAX_SLIDER: "essential-blocks/parallax-slider",
   POPUP: "essential-blocks/popup",
   POST_CAROUSEL: "essential-blocks/post-carousel",
   POST_GRID: "essential-blocks/post-grid",
   PRICE: "essential-blocks/price",
-  PRICING_TABLE: "essential-blocks/pricing-table",
+  PRICING_TABLE: "essential-blocks/pricing-table", //done
   PROGRESS_BAR: "essential-blocks/progress-bar",
   ROW: "essential-blocks/row",
   SHAPE_DIVIDER: "essential-blocks/shape-divider",

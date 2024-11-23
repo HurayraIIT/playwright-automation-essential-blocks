@@ -46,6 +46,7 @@ test.describe("EB Advanced Search", () => {
     // Save the post
     await expect(page.getByRole("button", { name: "Publish", exact: true })).toBeVisible();
     await page.getByRole("button", { name: "Publish", exact: true }).click();
+    await page.getByRole("button", { name: "Save", exact: true }).waitFor();
     await expect(page.getByRole("button", { name: "Save", exact: true })).toBeVisible();
     await expect(page.getByLabel("View Post")).toBeVisible();
     const page1Promise = page.waitForEvent("popup");
