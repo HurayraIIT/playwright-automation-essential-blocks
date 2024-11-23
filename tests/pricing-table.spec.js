@@ -35,5 +35,7 @@ test.describe("EB Pricing Table", () => {
     await expect(page1.getByText("Free Hosting")).toBeVisible();
     await expect(page1.getByText("500MB Free Storage")).toBeVisible();
     await expect(page1.getByText("24/7 Support")).toBeVisible();
+
+    await page1.close();
   });
 });
