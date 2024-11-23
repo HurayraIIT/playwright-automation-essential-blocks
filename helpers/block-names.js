@@ -36,7 +36,7 @@ const EB_Free_Blocks = Object.freeze({
   INSTAGRAM_FEED: "essential-blocks/instagram-feed",
   INTERACTIVE_PROMO: "essential-blocks/interactive-promo",
   NFT_GALLERY: "essential-blocks/nft-gallery",
-  NOTICE: "essential-blocks/notice",
+  NOTICE: "essential-blocks/notice", //done
   NUMBER_COUNTER: "essential-blocks/number-counter",
   OPENVERSE: "essential-blocks/openverse",
   PARALLAX_SLIDER: "essential-blocks/parallax-slider",
