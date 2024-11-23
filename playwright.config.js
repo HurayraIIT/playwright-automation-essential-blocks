@@ -15,7 +15,25 @@ export default defineConfig({
   workers: process.env.CI ? 1 : 1,
   timeout: 30 * 1000,
 
-  reporter: [["dot"], ["list"], ["html"]],
+  reporter: process.env.CI
+    ? [
+        [
+          "./node_modules/playwright-slack-report/dist/src/SlackReporter.js",
+          {
+            slackWebHookUrl: process.env.SLACK_WEBHOOK_URL,
+            sendResults: "always", // "always" , "on-failure", "off"
+            maxNumberOfFailuresToShow: 0,
+            meta: [
+              {
+                key: ":eb: Essential Blocks - Test Results",
+                value: "<https://hurayraiit.github.io/playwright-automation-essential-blocks/ | 📂 Click Here!>",
+              },
+            ],
+          },
+        ],
+        ["html"],
+      ]
+    : [["dot"], ["list"], ["html"]],
 
   use: {
     baseURL: process.env.WP_BASE_URL,
@@ -39,6 +57,6 @@ export default defineConfig({
     {
       name: "chromium",
       use: { ...devices["Desktop Chrome"] },
-    }
+    },
   ],
 });
