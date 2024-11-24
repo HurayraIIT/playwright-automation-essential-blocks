@@ -22,11 +22,12 @@ export default defineConfig({
           {
             slackWebHookUrl: process.env.SLACK_WEBHOOK_URL,
             sendResults: "always", // "always" , "on-failure", "off"
-            maxNumberOfFailuresToShow: 0,
+            maxNumberOfFailuresToShow: 4,
+            showInThread: true,
             meta: [
               {
                 key: ":eb: Essential Blocks - Test Results",
-                value: "<https://hurayraiit.github.io/playwright-automation-essential-blocks/ | 📂 Click Here!>",
+                value: "<https://hurayraiit.github.io/playwright-automation-essential-blocks/ | 📂 Click Here!> (It may take a few minutes to update.)",
               },
             ],
           },
