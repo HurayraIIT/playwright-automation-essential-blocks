@@ -1,7 +1,7 @@
 "use strict";
 
-// FREE BLOCKS: https://github.com/WPDevelopers/essential-blocks/blob/master/blocks/accordion/block.json
-// PRO BLOCKS: https://github.com/WPDevelopers/essential-blocks-pro/blob/main/blocks/advanced-search/block.json
+// FREE BLOCKS: https://github.com/WPDevelopers/essential-blocks/blob/master/src/blocks/form/block.json
+// PRO BLOCKS: https://github.com/WPDevelopers/essential-blocks-pro/blob/main/src/blocks/advanced-search/block.json
 
 const EB_Free_Blocks = Object.freeze({
   ACCORDION_ITEM: "essential-blocks/accordion-item",
