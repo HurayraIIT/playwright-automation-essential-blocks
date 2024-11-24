@@ -14,6 +14,8 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : 1,
   timeout: 30 * 1000,
+  actionTimeout: 10_000,
+  navigationTimeout: 10_000,
 
   reporter: process.env.CI
     ? [
@@ -27,7 +29,8 @@ export default defineConfig({
             meta: [
               {
                 key: ":eb: Essential Blocks - Test Results",
-                value: "<https://hurayraiit.github.io/playwright-automation-essential-blocks/ | 📂 Click Here!> (It may take a few minutes to update.)",
+                value:
+                  "<https://hurayraiit.github.io/playwright-automation-essential-blocks/ | 📂 Click Here!> (It may take a few minutes to update.)",
               },
             ],
           },
