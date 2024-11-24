@@ -24,8 +24,7 @@ export default defineConfig({
           {
             slackWebHookUrl: process.env.SLACK_WEBHOOK_URL,
             sendResults: "always", // "always" , "on-failure", "off"
-            maxNumberOfFailuresToShow: 4,
-            showInThread: true,
+            maxNumberOfFailuresToShow: 0,
             meta: [
               {
                 key: ":eb: Essential Blocks - Test Results",
