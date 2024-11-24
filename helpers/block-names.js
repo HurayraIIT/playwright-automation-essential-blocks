@@ -45,7 +45,7 @@ const EB_Free_Blocks = Object.freeze({
   POST_GRID: "essential-blocks/post-grid",
   PRICE: "essential-blocks/price",
   PRICING_TABLE: "essential-blocks/pricing-table", //done
-  PROGRESS_BAR: "essential-blocks/progress-bar",
+  PROGRESS_BAR: "essential-blocks/progress-bar", //done
   ROW: "essential-blocks/row",
   SHAPE_DIVIDER: "essential-blocks/shape-divider",
   SLIDER: "essential-blocks/slider",
