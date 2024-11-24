@@ -3,9 +3,9 @@ import { test, expect } from "@wordpress/e2e-test-utils-playwright";
 import { EB_Free_Blocks } from "../helpers/block-names";
 import generateTimestamp from "../helpers/generator";
 
-test.describe("EB Call TO Action", () => {
-  test("can insert a Call TO Action block", async ({ admin, editor, page }) => {
-    await admin.createNewPost({ postType: "post", title: `EB Call TO Action ${generateTimestamp()}` });
+test.describe("EB Call To Action", () => {
+  test("can insert a Call To Action block", async ({ admin, editor, page }) => {
+    await admin.createNewPost({ postType: "post", title: `EB Call To Action ${generateTimestamp()}` });
     await editor.insertBlock({ name: EB_Free_Blocks.CALL_TO_ACTION });
 
     //checking block visibility in editor

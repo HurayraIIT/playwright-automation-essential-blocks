@@ -9,6 +9,13 @@ test.describe("EB Advanced Video", () => {
     await editor.insertBlock({ name: EB_Free_Blocks.ADVANCED_VIDEO });
 
     // Check visibility in the editor
+    await page
+      .locator('iframe[title="Essential Blocks For Gutenberg - Instantly Design Stunning Websites With Ready Blocks"]')
+      .contentFrame()
+      .locator("div")
+      .filter({ hasText: "Essential Blocks For" })
+      .nth(4)
+      .waitFor();
     await expect(
       page
         .locator(
@@ -32,6 +39,13 @@ test.describe("EB Advanced Video", () => {
     const page1 = await page1Promise;
 
     // Check frontend visibility
-    await expect(page1.locator('iframe[title="Essential Blocks For Gutenberg - Instantly Design Stunning Websites With Ready Blocks"]').contentFrame().getByRole('link', { name: 'Essential Blocks For' })).toBeVisible();
+    await expect(
+      page1
+        .locator(
+          'iframe[title="Essential Blocks For Gutenberg - Instantly Design Stunning Websites With Ready Blocks"]'
+        )
+        .contentFrame()
+        .getByRole("link", { name: "Essential Blocks For" })
+    ).toBeVisible();
   });
 });

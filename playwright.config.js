@@ -12,7 +12,7 @@ export default defineConfig({
 
   fullyParallel: true,
   retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 2 : 1,
+  workers: process.env.CI ? 1 : 1,
   timeout: 30 * 1000,
   actionTimeout: 10_000,
   navigationTimeout: 10_000,
