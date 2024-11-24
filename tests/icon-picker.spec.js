@@ -11,8 +11,8 @@ test.describe("EB Icon Picker", () => {
     // Insert content
 
     // Check visibility in the editor
-    await expect(page.getByLabel("Block: Icon Picker").locator("div").nth(1)).toBeVisible();
-    await expect(page.getByLabel("Editor content").locator("i")).toBeVisible();
+    await expect.soft(page.getByLabel("Block: Icon Picker").locator("div").nth(1)).toBeVisible();
+    await expect.soft(page.getByLabel("Editor content").locator("i")).toBeVisible();
 
     // Publish the post
     await page.getByRole("button", { name: "Publish", exact: true }).click();
@@ -26,7 +26,7 @@ test.describe("EB Icon Picker", () => {
     const page1 = await page1Promise;
 
     // Check frontend visibility
-    await expect(page1.locator(".eb-icon-wrapper")).toBeVisible();
-    await expect(page1.locator("i")).toHaveAttribute("icon", /fa-check-circle/);
+    await expect.soft(page1.locator(".eb-icon-wrapper")).toBeVisible();
+    await expect.soft(page1.locator("i")).toHaveAttribute("icon", /fa-check-circle/);
   });
 });

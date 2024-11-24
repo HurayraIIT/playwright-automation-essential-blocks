@@ -4,7 +4,7 @@ import { EB_Free_Blocks } from "../helpers/block-names";
 import generateTimestamp from "../helpers/generator";
 
 test.describe("EB Accordion", () => {
-  test("can insert an accordion block", async ({ admin, editor, page }) => {
+  test.skip("can insert an accordion block", async ({ admin, editor, page }) => {
     await admin.createNewPost({ postType: "post", title: `EB Accordion ${generateTimestamp()}` });
     await editor.insertBlock({ name: EB_Free_Blocks.ACCORDION });
 

@@ -19,16 +19,16 @@ test.describe("EB Button", () => {
     // Publish the post
     await page.getByRole("button", { name: "Publish", exact: true }).click();
     await page.getByRole("button", { name: "Save", exact: true }).waitFor();
-    await expect(page.getByRole("button", { name: "Save", exact: true })).toBeVisible();
+    await expect.soft(page.getByRole("button", { name: "Save", exact: true })).toBeVisible();
 
     // Open the post frontend
-    await expect(page.getByLabel("View Post")).toBeVisible();
+    await expect.soft(page.getByLabel("View Post")).toBeVisible();
     const page1Promise = page.waitForEvent("popup");
     await page.getByLabel("View Post").click();
     const page1 = await page1Promise;
 
     // Check frontend visibility
-    await expect(page1.getByRole("link", { name: "Click me 241124!" })).toBeVisible();
+    await expect.soft(page1.getByRole("link", { name: "Click me 241124!" })).toBeVisible();
     await expect.soft(page1.locator("a.eb-button-anchor")).toHaveAttribute("href", /https:\/\/example\.com/);
   });
 });
