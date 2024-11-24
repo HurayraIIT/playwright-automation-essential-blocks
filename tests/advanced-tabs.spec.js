@@ -15,13 +15,13 @@ test.describe("EB Advanced Tabs", () => {
 
     await page.getByRole("button", { name: "Publish", exact: true }).click();
     await page.getByRole("button", { name: "Save", exact: true }).waitFor();
-    await expect(page.getByRole("button", { name: "Save", exact: true })).toBeVisible();
+    await expect.soft(page.getByRole("button", { name: "Save", exact: true })).toBeVisible();
 
     const page1Promise = page.waitForEvent("popup");
     await page.getByLabel("View Post").click();
     const page1 = await page1Promise;
 
-    await expect(page1.getByRole("heading", { name: /First Tab Title/ })).toBeVisible();
-    await expect(page1.getByText(/First tab content/)).toBeVisible();
+    await expect.soft(page1.getByRole("heading", { name: /First Tab Title/ })).toBeVisible();
+    await expect.soft(page1.getByText(/First tab content/)).toBeVisible();
   });
 });

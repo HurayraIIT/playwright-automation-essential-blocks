@@ -12,8 +12,8 @@ test.describe("EB Instagram Feed", () => {
     // Insert content
 
     // Check visibility in the editor
-    await expect(page.getByText('To get started please add an Instagram Access Token here.')).toBeVisible();
-    await expect(page.getByRole("link", { name: "here.(opens in a new tab)" })).toHaveAttribute(
+    await expect.soft(page.getByText('To get started please add an Instagram Access Token here.')).toBeVisible();
+    await expect.soft(page.getByRole("link", { name: "here.(opens in a new tab)" })).toHaveAttribute(
       "href",
       /wp-admin\/admin\.php\?page=essential-blocks&tab=options/
     );

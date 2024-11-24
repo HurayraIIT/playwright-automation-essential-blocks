@@ -9,15 +9,15 @@ test.describe("EB Google Maps", () => {
     await editor.insertBlock({ name: EB_Free_Blocks.GOOGLE_MAP });
 
     // Insert content
-    await expect(page.getByLabel("Editor content").getByRole("heading", { name: "Google Maps" })).toBeVisible();
-    await expect(
+    await expect.soft(page.getByLabel("Editor content").getByRole("heading", { name: "Google Maps" })).toBeVisible();
+    await expect.soft(
       page.getByLabel("Editor content").getByText("Please add your Google Map API Here to display Google Maps Block")
     ).toBeVisible();
-    await expect(page.getByLabel("Editor content").getByRole("link", { name: "Here" })).toHaveAttribute(
+    await expect.soft(page.getByLabel("Editor content").getByRole("link", { name: "Here" })).toHaveAttribute(
       "href",
       /wp-admin\/admin\.php\?page=essential-blocks&tab=options/
     );
-    await expect(
+    await expect.soft(
       page.getByLabel("Editor content").getByRole("link", { name: "Learn more about Google Map API" })
     ).toHaveAttribute("href", "https://essential-blocks.com/docs/retrieve-google-maps-api");
 
@@ -35,6 +35,6 @@ test.describe("EB Google Maps", () => {
     const page1 = await page1Promise;
 
     // Check frontend visibility
-    await expect(page1.getByText("Please add your Google Map API to display Google Maps Block")).toBeVisible();
+    await expect.soft(page1.getByText("Please add your Google Map API to display Google Maps Block")).toBeVisible();
   });
 });

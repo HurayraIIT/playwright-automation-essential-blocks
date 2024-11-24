@@ -9,20 +9,20 @@ test.describe("EB Form", () => {
     await editor.insertBlock({ name: EB_Free_Blocks.FORM });
 
     // Insert content
-    await expect(page.getByRole("heading", { name: "Please Select a Form Type" })).toBeVisible();
-    await expect(page.locator("div").filter({ hasText: /^Contact Form$/ })).toBeVisible();
-    await expect(page.locator("div").filter({ hasText: /^Subscription Form$/ })).toBeVisible();
-    await expect(page.locator("div").filter({ hasText: /^RSVP Form$/ })).toBeVisible();
-    await expect(page.locator("div").filter({ hasText: /^Blank$/ })).toBeVisible();
+    await expect.soft(page.getByRole("heading", { name: "Please Select a Form Type" })).toBeVisible();
+    await expect.soft(page.locator("div").filter({ hasText: /^Contact Form$/ })).toBeVisible();
+    await expect.soft(page.locator("div").filter({ hasText: /^Subscription Form$/ })).toBeVisible();
+    await expect.soft(page.locator("div").filter({ hasText: /^RSVP Form$/ })).toBeVisible();
+    await expect.soft(page.locator("div").filter({ hasText: /^Blank$/ })).toBeVisible();
     await page
       .locator("div")
       .filter({ hasText: /^Subscription Form$/ })
       .click();
-    await expect(page.getByText("Add Form Field")).toBeVisible();
-    await expect(page.getByText("Get The Latest Updates")).toBeVisible();
-    await expect(page.getByText("Through Our Newsletter")).toBeVisible();
-    await expect(page.getByText("Email", { exact: true })).toBeVisible();
-    await expect(page.getByLabel("Add block")).toBeVisible();
+    await expect.soft(page.getByText("Add Form Field")).toBeVisible();
+    await expect.soft(page.getByText("Get The Latest Updates")).toBeVisible();
+    await expect.soft(page.getByText("Through Our Newsletter")).toBeVisible();
+    await expect.soft(page.getByText("Email", { exact: true })).toBeVisible();
+    await expect.soft(page.getByLabel("Add block")).toBeVisible();
 
     // Check visibility in the editor
 
@@ -38,10 +38,10 @@ test.describe("EB Form", () => {
     const page1 = await page1Promise;
 
     // Check frontend visibility
-    await expect(page1.getByText("Get The Latest Updates")).toBeVisible();
-    await expect(page1.getByRole("heading", { name: "Through Our Newsletter" })).toBeVisible();
-    await expect(page1.getByText("Email *")).toBeVisible();
-    await expect(page1.getByPlaceholder("email@example.com")).toBeVisible();
-    await expect(page1.getByRole("button", { name: "Submit" })).toBeVisible();
+    await expect.soft(page1.getByText("Get The Latest Updates")).toBeVisible();
+    await expect.soft(page1.getByRole("heading", { name: "Through Our Newsletter" })).toBeVisible();
+    await expect.soft(page1.getByText("Email *")).toBeVisible();
+    await expect.soft(page1.getByPlaceholder("email@example.com")).toBeVisible();
+    await expect.soft(page1.getByRole("button", { name: "Submit" })).toBeVisible();
   });
 });
