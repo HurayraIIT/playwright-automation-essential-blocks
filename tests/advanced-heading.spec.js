@@ -1,12 +1,17 @@
 "use strict";
 import { test, expect } from "@wordpress/e2e-test-utils-playwright";
 import { EB_Free_Blocks } from "../helpers/block-names";
+import { clickIfAriaExpandedIsFalse } from '../helpers/buttonUtils';
 import generateTimestamp from "../helpers/generator";
 
 test.describe("EB Advanced Heading", () => {
   test("can insert an Advanced Heading block", async ({ admin, editor, page }) => {
     await admin.createNewPost({ postType: "post", title: `EB Advanced Heading ${generateTimestamp()}` });
     await editor.insertBlock({ name: EB_Free_Blocks.ADVANCED_HEADING });
+
+    //opening setting tab in editor
+    const button = page.locator('xpath=//*[@id="editor"]/div/div[1]/div[1]/div[1]/div/div[3]/div[2]/button[2]');;
+    await clickIfAriaExpandedIsFalse(button);
 
     await expect.soft(page.getByText("Essential Blocks Advanced Heading")).toBeVisible();
     await expect.soft(page.getByRole("heading", { name: "Advanced Heading", exact: true })).toBeVisible();

@@ -45,7 +45,7 @@ const EB_Free_Blocks = Object.freeze({
   POST_GRID: "essential-blocks/post-grid",
   PRICE: "essential-blocks/price",
   PRICING_TABLE: "essential-blocks/pricing-table", //done
-  PROGRESS_BAR: "essential-blocks/progress-bar",
+  PROGRESS_BAR: "essential-blocks/progress-bar", //done
   ROW: "essential-blocks/row",
   SHAPE_DIVIDER: "essential-blocks/shape-divider",
   SLIDER: "essential-blocks/slider",
@@ -53,9 +53,9 @@ const EB_Free_Blocks = Object.freeze({
   SOCIAL: "essential-blocks/social",
   TAB: "essential-blocks/tab",
   TABLE_OF_CONTENTS: "essential-blocks/table-of-contents",
-  TEAM_MEMBER: "essential-blocks/team-member",
-  TESTIMONIAL: "essential-blocks/testimonial",
-  TOGGLE_CONTENT: "essential-blocks/toggle-content",
+  TEAM_MEMBER: "essential-blocks/team-member", //done
+  TESTIMONIAL: "essential-blocks/testimonial", //done
+  TOGGLE_CONTENT: "essential-blocks/toggle-content", //done
   TYPING_TEXT: "essential-blocks/typing-text",
   WOO_PRODUCT_GRID: "essential-blocks/woo-product-grid",
   WPFORMS: "essential-blocks/wpforms",
