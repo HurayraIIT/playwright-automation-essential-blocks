@@ -16,7 +16,7 @@ const EB_Free_Blocks = Object.freeze({
   CALL_TO_ACTION: "essential-blocks/call-to-action", //done
   COLUMN: "essential-blocks/column",
   COUNTDOWN: "essential-blocks/countdown", //done
-  DUAL_BUTTON: "essential-blocks/dual-button",
+  DUAL_BUTTON: "essential-blocks/dual-button", //done
   FEATURE_LIST: "essential-blocks/feature-list", //done
   FLIPBOX: "essential-blocks/flipbox", //done
   FLUENT_FORMS: "essential-blocks/fluent-forms",
@@ -28,18 +28,18 @@ const EB_Free_Blocks = Object.freeze({
   FORM_TEXT_FIELD: "essential-blocks/form-text-field",
   FORM_TEXTAREA_FIELD: "essential-blocks/form-textarea-field",
   FORM: "essential-blocks/form",
-  GOOGLE_MAP: "essential-blocks/google-map",
+  GOOGLE_MAP: "essential-blocks/google-map", //done
   ICON: "essential-blocks/icon",
   IMAGE_COMPARISON: "essential-blocks/image-comparison",
-  IMAGE_GALLERY: "essential-blocks/image-gallery",
+  IMAGE_GALLERY: "essential-blocks/image-gallery", //done
   INFOBOX: "essential-blocks/infobox", //done
   INSTAGRAM_FEED: "essential-blocks/instagram-feed",
-  INTERACTIVE_PROMO: "essential-blocks/interactive-promo",
+  INTERACTIVE_PROMO: "essential-blocks/interactive-promo", //done
   NFT_GALLERY: "essential-blocks/nft-gallery",
   NOTICE: "essential-blocks/notice", //done
   NUMBER_COUNTER: "essential-blocks/number-counter", //done
   OPENVERSE: "essential-blocks/openverse",
-  PARALLAX_SLIDER: "essential-blocks/parallax-slider",
+  PARALLAX_SLIDER: "essential-blocks/parallax-slider", //done
   POPUP: "essential-blocks/popup",
   POST_CAROUSEL: "essential-blocks/post-carousel",
   POST_GRID: "essential-blocks/post-grid",
