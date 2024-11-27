@@ -28,10 +28,10 @@ const EB_Free_Blocks = Object.freeze({
   FORM_TEXT_FIELD: "essential-blocks/form-text-field",
   FORM_TEXTAREA_FIELD: "essential-blocks/form-textarea-field",
   FORM: "essential-blocks/form",
-  GOOGLE_MAP: "essential-blocks/google-map",
+  GOOGLE_MAP: "essential-blocks/google-map", //done
   ICON: "essential-blocks/icon",
   IMAGE_COMPARISON: "essential-blocks/image-comparison",
-  IMAGE_GALLERY: "essential-blocks/image-gallery",
+  IMAGE_GALLERY: "essential-blocks/image-gallery", //done
   INFOBOX: "essential-blocks/infobox", //done
   INSTAGRAM_FEED: "essential-blocks/instagram-feed",
   INTERACTIVE_PROMO: "essential-blocks/interactive-promo",
@@ -39,7 +39,7 @@ const EB_Free_Blocks = Object.freeze({
   NOTICE: "essential-blocks/notice", //done
   NUMBER_COUNTER: "essential-blocks/number-counter", //done
   OPENVERSE: "essential-blocks/openverse",
-  PARALLAX_SLIDER: "essential-blocks/parallax-slider",
+  PARALLAX_SLIDER: "essential-blocks/parallax-slider", //done
   POPUP: "essential-blocks/popup",
   POST_CAROUSEL: "essential-blocks/post-carousel",
   POST_GRID: "essential-blocks/post-grid",
