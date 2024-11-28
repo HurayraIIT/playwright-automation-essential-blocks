@@ -7,7 +7,7 @@ const EB_Free_Blocks = Object.freeze({
   ACCORDION_ITEM: "essential-blocks/accordion-item",
   ACCORDION: "essential-blocks/accordion", // done
   ADVANCED_HEADING: "essential-blocks/advanced-heading", //done
-  ADVANCED_IMAGE: "essential-blocks/advanced-image",
+  ADVANCED_IMAGE: "essential-blocks/advanced-image", //done
   ADVANCED_NAVIGATION: "essential-blocks/advanced-navigation", //done
   ADVANCED_TABS: "essential-blocks/advanced-tabs", //done
   ADVANCED_VIDEO: "essential-blocks/advanced-video",
