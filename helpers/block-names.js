@@ -29,7 +29,7 @@ const EB_Free_Blocks = Object.freeze({
   FORM_TEXTAREA_FIELD: "essential-blocks/form-textarea-field",
   FORM: "essential-blocks/form",
   GOOGLE_MAP: "essential-blocks/google-map", //done
-  ICON: "essential-blocks/icon",
+  ICON: "essential-blocks/icon", //done
   IMAGE_COMPARISON: "essential-blocks/image-comparison", //done
   IMAGE_GALLERY: "essential-blocks/image-gallery", //done
   INFOBOX: "essential-blocks/infobox", //done
