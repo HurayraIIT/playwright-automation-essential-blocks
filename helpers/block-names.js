@@ -30,7 +30,7 @@ const EB_Free_Blocks = Object.freeze({
   FORM: "essential-blocks/form",
   GOOGLE_MAP: "essential-blocks/google-map", //done
   ICON: "essential-blocks/icon",
-  IMAGE_COMPARISON: "essential-blocks/image-comparison",
+  IMAGE_COMPARISON: "essential-blocks/image-comparison", //done
   IMAGE_GALLERY: "essential-blocks/image-gallery", //done
   INFOBOX: "essential-blocks/infobox", //done
   INSTAGRAM_FEED: "essential-blocks/instagram-feed",
