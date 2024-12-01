@@ -10,7 +10,7 @@ const EB_Free_Blocks = Object.freeze({
   ADVANCED_IMAGE: "essential-blocks/advanced-image", //done
   ADVANCED_NAVIGATION: "essential-blocks/advanced-navigation", //done
   ADVANCED_TABS: "essential-blocks/advanced-tabs", //done
-  ADVANCED_VIDEO: "essential-blocks/advanced-video",
+  ADVANCED_VIDEO: "essential-blocks/advanced-video", //done
   BUTTON: "essential-blocks/button", //done
   BREADCRUMBS: "essential-blocks/breadcrumbs", //done
   CALL_TO_ACTION: "essential-blocks/call-to-action", //done
@@ -48,7 +48,7 @@ const EB_Free_Blocks = Object.freeze({
   PROGRESS_BAR: "essential-blocks/progress-bar", //done
   ROW: "essential-blocks/row",
   SHAPE_DIVIDER: "essential-blocks/shape-divider", //done
-  SLIDER: "essential-blocks/slider",
+  SLIDER: "essential-blocks/slider", //done
   SOCIAL_SHARE: "essential-blocks/social-share", //done
   SOCIAL: "essential-blocks/social",
   TAB: "essential-blocks/tab",

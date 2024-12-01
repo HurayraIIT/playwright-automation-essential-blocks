@@ -3,10 +3,12 @@ import { test, expect } from "@wordpress/e2e-test-utils-playwright";
 import { EB_Free_Blocks } from "../helpers/block-names";
 import generateTimestamp from "../helpers/generator";
 
-test.describe("EB Parallax Slider", () => {
-  test("can insert a Parallax Slider block", async ({ admin, editor, page }) => {
-    await admin.createNewPost({ postType: "post", title: `EB Parallax Slider ${generateTimestamp()}` });
-    await editor.insertBlock({ name: EB_Free_Blocks.PARALLAX_SLIDER });
+test.describe("EB Slider", () => {
+  test("can insert an Slider block", async ({ admin, editor, page }) => {
+    await admin.createNewPost({ postType: "post", title: `EB Slider ${generateTimestamp()}` });
+    await editor.insertBlock({ name: EB_Free_Blocks.SLIDER });
+
+    //checking block visibility in editor
 
     //start with media library
     await expect.soft(page.getByRole("button", { name: "Media Library", exact: true })).toBeVisible();
@@ -25,44 +27,44 @@ test.describe("EB Parallax Slider", () => {
     }
 
 
+
     await expect.soft(page.getByRole("button", { name: "Create a new gallery", exact: true })).toBeVisible();
-    await page.getByRole("button", { name: "Create a new gallery" }).click()
+    await page.getByRole("button", { name: "Create a new gallery" }).click();
 
     await expect.soft(page.getByRole("button", { name: "Insert gallery", exact: true })).toBeVisible();
-    await page.getByRole("button", { name: "Insert gallery" }).click()
+    await page.getByRole("button", { name: "Insert gallery" }).click();
 
+    
 
     //checking slide function in editor
-    var count = await page.locator('ul>li.slide').count();
+    var count = await page.locator('div.slick-slide.slick-cloned').count();
     for (let i = 0; i < count - 1; i++) {
-        var next_SlideElement = await page.locator('ul>li.slide.slide--next');
+        var next_SlideElement = await page.locator('div.slick-arrow.slick-next');
         if (await next_SlideElement.isVisible()) {
+            await page.waitForTimeout(500);
             await next_SlideElement.click();
         }
     }
 
-
     // Publish the post
-    await page.getByRole("button", { name: "Publish", exact: true }).click();
-    await page.getByRole("button", { name: "Save", exact: true }).waitFor();
-    await expect.soft(page.getByRole("button", { name: "Save", exact: true })).toBeVisible();
-
-    await expect.soft(page.getByLabel("View Post")).toBeVisible();
-    const page1Promise = page.waitForEvent("popup");
-    await page.getByLabel("View Post").click();
+    await page.getByRole('button', { name: 'Publish', exact: true }).click();
+    await expect(page.getByRole('button', { name: 'Save', exact: true })).toBeVisible();
+    await expect(page.getByLabel('View Post')).toBeVisible();
+    const page1Promise = page.waitForEvent('popup');
+    await page.getByLabel('View Post').click();
     const page1 = await page1Promise;
 
     //checking block visibility in post
-    await expect.soft(page1.locator('h1:has-text("EB Parallax Slider 2")')).toBeVisible();
+    await expect(page1.locator('h1:has-text("EB Slider 2")')).toBeVisible();
 
-    //checking block visibility in editor
-    var count = await page1.locator('ul>li.slide').count();
-    for (let i = 0; i < count - 2; i++) {
-        var next_SlideElement = await page1.locator('ul>li.slide.slide--next');
+
+    //checking slide function in editor
+    for (let i = 0; i < 6; i++) {
+        var next_SlideElement = await page1.locator('i.fas.fa-arrow-alt-circle-right');
         if (await next_SlideElement.isVisible()) {
+            await page1.waitForTimeout(500);
             await next_SlideElement.click();
         }
     }
-    
   });
 });
