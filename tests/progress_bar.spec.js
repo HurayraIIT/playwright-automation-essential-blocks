@@ -9,7 +9,7 @@ test.describe("EB Progress bar", () => {
     await editor.insertBlock({ name: EB_Free_Blocks.PROGRESS_BAR });
 
     //checking block visibility in editor
-
+    await page.waitForTimeout(500);
     await expect(page.locator('div[role="textbox"][class*="block-editor-rich-text__editable"][contenteditable="true"]')).toBeVisible();
     await expect(page.getByLabel('Editor content').getByText('50%')).toBeVisible();
 
@@ -24,7 +24,7 @@ test.describe("EB Progress bar", () => {
 
     //checking block visibility in post
     await expect(page1.locator('h1:has-text("EB Progress bar 2")')).toBeVisible();
-
+    await page1.waitForTimeout(500);
     await expect(page1.locator('div.eb-progressbar-title')).toBeVisible();
     await expect(page1.getByText('50%')).toBeVisible();
   });
