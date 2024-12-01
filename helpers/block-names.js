@@ -7,10 +7,10 @@ const EB_Free_Blocks = Object.freeze({
   ACCORDION_ITEM: "essential-blocks/accordion-item",
   ACCORDION: "essential-blocks/accordion", // done
   ADVANCED_HEADING: "essential-blocks/advanced-heading", //done
-  ADVANCED_IMAGE: "essential-blocks/advanced-image",
+  ADVANCED_IMAGE: "essential-blocks/advanced-image", //done
   ADVANCED_NAVIGATION: "essential-blocks/advanced-navigation", //done
   ADVANCED_TABS: "essential-blocks/advanced-tabs", //done
-  ADVANCED_VIDEO: "essential-blocks/advanced-video",
+  ADVANCED_VIDEO: "essential-blocks/advanced-video", //done
   BUTTON: "essential-blocks/button", //done
   BREADCRUMBS: "essential-blocks/breadcrumbs", //done
   CALL_TO_ACTION: "essential-blocks/call-to-action", //done
@@ -29,8 +29,8 @@ const EB_Free_Blocks = Object.freeze({
   FORM_TEXTAREA_FIELD: "essential-blocks/form-textarea-field",
   FORM: "essential-blocks/form",
   GOOGLE_MAP: "essential-blocks/google-map", //done
-  ICON: "essential-blocks/icon",
-  IMAGE_COMPARISON: "essential-blocks/image-comparison",
+  ICON: "essential-blocks/icon", //done
+  IMAGE_COMPARISON: "essential-blocks/image-comparison", //done
   IMAGE_GALLERY: "essential-blocks/image-gallery", //done
   INFOBOX: "essential-blocks/infobox", //done
   INSTAGRAM_FEED: "essential-blocks/instagram-feed",
@@ -38,7 +38,7 @@ const EB_Free_Blocks = Object.freeze({
   NFT_GALLERY: "essential-blocks/nft-gallery",
   NOTICE: "essential-blocks/notice", //done
   NUMBER_COUNTER: "essential-blocks/number-counter", //done
-  OPENVERSE: "essential-blocks/openverse",
+  OPENVERSE: "essential-blocks/openverse", //done
   PARALLAX_SLIDER: "essential-blocks/parallax-slider", //done
   POPUP: "essential-blocks/popup",
   POST_CAROUSEL: "essential-blocks/post-carousel",
@@ -47,16 +47,16 @@ const EB_Free_Blocks = Object.freeze({
   PRICING_TABLE: "essential-blocks/pricing-table", //done
   PROGRESS_BAR: "essential-blocks/progress-bar", //done
   ROW: "essential-blocks/row",
-  SHAPE_DIVIDER: "essential-blocks/shape-divider",
-  SLIDER: "essential-blocks/slider",
-  SOCIAL_SHARE: "essential-blocks/social-share",
+  SHAPE_DIVIDER: "essential-blocks/shape-divider", //done
+  SLIDER: "essential-blocks/slider", //done
+  SOCIAL_SHARE: "essential-blocks/social-share", //done
   SOCIAL: "essential-blocks/social",
   TAB: "essential-blocks/tab",
   TABLE_OF_CONTENTS: "essential-blocks/table-of-contents",
   TEAM_MEMBER: "essential-blocks/team-member", //done
   TESTIMONIAL: "essential-blocks/testimonial", //done
   TOGGLE_CONTENT: "essential-blocks/toggle-content", //done
-  TYPING_TEXT: "essential-blocks/typing-text",
+  TYPING_TEXT: "essential-blocks/typing-text", //done
   WOO_PRODUCT_GRID: "essential-blocks/woo-product-grid",
   WPFORMS: "essential-blocks/wpforms",
   WRAPPER: "essential-blocks/wrapper",
