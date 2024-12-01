@@ -47,9 +47,9 @@ const EB_Free_Blocks = Object.freeze({
   PRICING_TABLE: "essential-blocks/pricing-table", //done
   PROGRESS_BAR: "essential-blocks/progress-bar", //done
   ROW: "essential-blocks/row",
-  SHAPE_DIVIDER: "essential-blocks/shape-divider",
+  SHAPE_DIVIDER: "essential-blocks/shape-divider", //done
   SLIDER: "essential-blocks/slider",
-  SOCIAL_SHARE: "essential-blocks/social-share",
+  SOCIAL_SHARE: "essential-blocks/social-share", //done
   SOCIAL: "essential-blocks/social",
   TAB: "essential-blocks/tab",
   TABLE_OF_CONTENTS: "essential-blocks/table-of-contents",
