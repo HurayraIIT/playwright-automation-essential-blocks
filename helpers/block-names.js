@@ -20,20 +20,20 @@ const EB_Free_Blocks = Object.freeze({
   FEATURE_LIST: "essential-blocks/feature-list", //done
   FLIPBOX: "essential-blocks/flipbox", //done
   FLUENT_FORMS: "essential-blocks/fluent-forms",
-  FORM_CHECKBOX_FIELD: "essential-blocks/form-checkbox-field",
-  FORM_EMAIL_FIELD: "essential-blocks/form-email-field",
-  FORM_NUMBER_FIELD: "essential-blocks/form-number-field",
-  FORM_RADIO_FIELD: "essential-blocks/form-radio-field",
-  FORM_SELECT_FIELD: "essential-blocks/form-select-field",
-  FORM_TEXT_FIELD: "essential-blocks/form-text-field",
-  FORM_TEXTAREA_FIELD: "essential-blocks/form-textarea-field",
-  FORM: "essential-blocks/form",
+  FORM_CHECKBOX_FIELD: "essential-blocks/form-checkbox-field", //done
+  FORM_EMAIL_FIELD: "essential-blocks/form-email-field", //done
+  FORM_NUMBER_FIELD: "essential-blocks/form-number-field", //done
+  FORM_RADIO_FIELD: "essential-blocks/form-radio-field", //done
+  FORM_SELECT_FIELD: "essential-blocks/form-select-field", //done
+  FORM_TEXT_FIELD: "essential-blocks/form-text-field", //done
+  FORM_TEXTAREA_FIELD: "essential-blocks/form-textarea-field", //done
+  FORM: "essential-blocks/form", //done
   GOOGLE_MAP: "essential-blocks/google-map", //done
   ICON: "essential-blocks/icon", //done
   IMAGE_COMPARISON: "essential-blocks/image-comparison", //done
   IMAGE_GALLERY: "essential-blocks/image-gallery", //done
   INFOBOX: "essential-blocks/infobox", //done
-  INSTAGRAM_FEED: "essential-blocks/instagram-feed",
+  INSTAGRAM_FEED: "essential-blocks/instagram-feed", //done
   INTERACTIVE_PROMO: "essential-blocks/interactive-promo", //done
   NFT_GALLERY: "essential-blocks/nft-gallery",
   NOTICE: "essential-blocks/notice", //done
