@@ -111,10 +111,7 @@ test.describe("EB Form", () => {
 
     const isExpanded = await collapseButton.getAttribute('aria-expanded');
     if (isExpanded === 'false') {
-        console.log('Button is collapsed, clicking to expand.');
         await collapseButton.click();
-    } else {
-        console.log('Button is already expanded.');
     }
 
     await page1.locator("xpath=//div[normalize-space()='Essential Blocks']").hover();
@@ -128,7 +125,7 @@ test.describe("EB Form", () => {
     await expect.soft(page1.getByText('ismail').first()).toBeVisible();
     await expect.soft(page1.getByText('hossain').first()).toBeVisible();
     await expect.soft(page1.getByText('sqa').first()).toBeVisible();
-    // await expect.soft(page1.getByText('sqa@gmail.com').first()).toBeVisible();    
+    await expect.soft(page1.getByText('sqa@gmail.com').first()).toBeVisible();    
     await expect.soft(page1.getByText('test massage').first()).toBeVisible();
 //due to pending issue additional block data are not adding in form response, please update if fixed.
   });
