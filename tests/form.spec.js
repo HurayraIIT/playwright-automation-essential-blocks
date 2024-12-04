@@ -2,6 +2,7 @@
 import { test, expect } from "@wordpress/e2e-test-utils-playwright";
 import { EB_Free_Blocks, EB_PRO_Blocks } from "../helpers/block-names";
 import generateTimestamp from "../helpers/generator";
+import { time } from "console";
 
 test.describe("EB Form", () => {
   test("can insert a Form block", async ({ admin, editor, page }) => {
@@ -20,11 +21,9 @@ test.describe("EB Form", () => {
       .click();
     //adding notification type from control panel
     // Check visibility in the editor
-    const today = new Date();
-    const dateWithHour = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')} ${String(today.getHours()).padStart(2, '0')}`;
+    const timestamp = Date.now();
 
-
-    await page.getByLabel('Form Title').fill(dateWithHour);
+    await page.getByLabel('Form Title').fill(String(timestamp));
 
     var response_type = page.getByLabel('Notification Type');
     await response_type.selectOption('save');
@@ -118,7 +117,7 @@ test.describe("EB Form", () => {
     await page1.getByText("Form Responses").click();
 
     await page1.locator('#select-form-list').click();
-    await page1.locator('#select-form-list').selectOption(dateWithHour);
+    await page1.locator('#select-form-list').selectOption(String(timestamp));
 
 
 
