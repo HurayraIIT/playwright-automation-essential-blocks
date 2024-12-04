@@ -116,10 +116,11 @@ test.describe("EB Form", () => {
     await page1.locator("xpath=//div[normalize-space()='Essential Blocks']").hover();
     await page1.getByText("Form Responses").click();
 
-    await page1.locator('#select-form-list').click();
-    await page1.locator('#select-form-list').selectOption(String(timestamp));
+    const form_response = await page1.locator(`#select-form-list option:has-text("${String(timestamp)}")`);
+    const form_response_value = await form_response.getAttribute('value');
 
 
+    await page1.goto(`https://eb-automation.qa1.site/wp-admin/admin.php?page=eb-form-responses&form=`+String(form_response_value));
 
     await expect.soft(page1.getByText('ismail').first()).toBeVisible();
     await expect.soft(page1.getByText('hossain').first()).toBeVisible();
