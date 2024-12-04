@@ -4,7 +4,7 @@
 // PRO BLOCKS: https://github.com/WPDevelopers/essential-blocks-pro/blob/main/src/blocks/advanced-search/block.json
 
 const EB_Free_Blocks = Object.freeze({
-  ACCORDION_ITEM: "essential-blocks/accordion-item",
+  ACCORDION_ITEM: "essential-blocks/accordion-item", //done
   ACCORDION: "essential-blocks/accordion", // done
   ADVANCED_HEADING: "essential-blocks/advanced-heading", //done
   ADVANCED_IMAGE: "essential-blocks/advanced-image", //done

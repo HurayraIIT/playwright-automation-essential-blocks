@@ -4,37 +4,32 @@ import { EB_Free_Blocks } from "../helpers/block-names";
 import generateTimestamp from "../helpers/generator";
 
 test.describe("EB Accordion", () => {
-  test.skip("can insert an accordion block", async ({ admin, editor, page }) => {
+  test("can insert an accordion block", async ({ admin, editor, page }) => {
     await admin.createNewPost({ postType: "post", title: `EB Accordion ${generateTimestamp()}` });
     await editor.insertBlock({ name: EB_Free_Blocks.ACCORDION });
 
-    await expect(page.getByText("Accordion title 1")).toBeVisible();
-    await expect(page.getByText("Accordion title 2")).toBeVisible();
-    await expect(page.getByText("Accordion title 3")).toBeVisible();
+    await expect.soft(page.getByRole("button", { name: "Start Blank", exact: true })).toBeVisible();
+    await page.getByRole("button", { name: "Start Blank" }).click();
 
-    await expect(page.getByRole("heading", { name: "Accordion", exact: true })).toBeVisible();
-    await expect(page.getByText("Display your FAQs & improve")).toBeVisible();
+    await expect(page.getByText("What Destinations Do You Offer?")).toBeVisible();
+    await expect(page.getByText("How Can I Book a Trip?")).toBeVisible();
+    await expect(page.getByText("What’s Included in Your Packages?")).toBeVisible();
 
-    await expect(page.getByRole("tab", { name: "General" })).toBeVisible();
-
-    await expect(page.getByText("Title Level")).toBeVisible();
-    await expect(page.getByRole("button", { name: "H2" })).toBeVisible();
-    // await page.getByRole("button", { name: "H2" }).click();
-
-    await expect(page.getByText("Toggle Speed")).toBeVisible();
-    // await page.getByRole("slider", { name: "Toggle Speed" }).fill("2.3");
-
-    await expect(page.getByText("Enable FAQ Schema")).toBeVisible();
-    // await page.getByLabel("Enable FAQ Schema").check();
-
+    // Publish the post
     await page.getByRole("button", { name: "Publish", exact: true }).click();
     await page.getByRole("button", { name: "Save", exact: true }).waitFor();
-    await expect(page.getByRole("button", { name: "Save", exact: true })).toBeVisible();
+    await expect.soft(page.getByRole("button", { name: "Save", exact: true })).toBeVisible();
 
+    await expect.soft(page.getByLabel("View Post")).toBeVisible();
     const page1Promise = page.waitForEvent("popup");
     await page.getByLabel("View Post").click();
     const page1 = await page1Promise;
-    await expect(page1.getByRole("button", { name: " Accordion title 1" })).toBeVisible();
-    await page1.getByRole("button", { name: " Accordion title 1" }).click();
+
+    //checking block visibility in post
+    await expect.soft(page1.locator('h1:has-text("EB Accordion 2")')).toBeVisible();
+
+    await expect(page1.getByText("What Destinations Do You Offer?")).toBeVisible();
+    await expect(page1.getByText("How Can I Book a Trip?")).toBeVisible();
+    await expect(page1.getByText("What’s Included in Your Packages?")).toBeVisible();
   });
 });
