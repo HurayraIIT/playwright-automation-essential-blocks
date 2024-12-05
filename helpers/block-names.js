@@ -50,7 +50,7 @@ const EB_Free_Blocks = Object.freeze({
   SHAPE_DIVIDER: "essential-blocks/shape-divider", //done
   SLIDER: "essential-blocks/slider", //done
   SOCIAL_SHARE: "essential-blocks/social-share", //done
-  SOCIAL: "essential-blocks/social",
+  SOCIAL: "essential-blocks/social", //done
   TAB: "essential-blocks/tab",
   TABLE_OF_CONTENTS: "essential-blocks/table-of-contents",
   TEAM_MEMBER: "essential-blocks/team-member", //done
