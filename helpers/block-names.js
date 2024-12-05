@@ -14,7 +14,7 @@ const EB_Free_Blocks = Object.freeze({
   BUTTON: "essential-blocks/button", //done
   BREADCRUMBS: "essential-blocks/breadcrumbs", //done
   CALL_TO_ACTION: "essential-blocks/call-to-action", //done
-  COLUMN: "essential-blocks/column",
+  COLUMN: "essential-blocks/column", //helper block
   COUNTDOWN: "essential-blocks/countdown", //done
   DUAL_BUTTON: "essential-blocks/dual-button", //done
   FEATURE_LIST: "essential-blocks/feature-list", //done
@@ -41,18 +41,18 @@ const EB_Free_Blocks = Object.freeze({
   OPENVERSE: "essential-blocks/openverse", //done
   PARALLAX_SLIDER: "essential-blocks/parallax-slider", //done
   POPUP: "essential-blocks/popup", //done
-  POST_CAROUSEL: "essential-blocks/post-carousel",
-  POST_GRID: "essential-blocks/post-grid",
-  PRICE: "essential-blocks/price",
+  POST_CAROUSEL: "essential-blocks/post-carousel", //done
+  POST_GRID: "essential-blocks/post-grid", //done
+  PRICE: "essential-blocks/price", //helper block
   PRICING_TABLE: "essential-blocks/pricing-table", //done
   PROGRESS_BAR: "essential-blocks/progress-bar", //done
-  ROW: "essential-blocks/row",
+  ROW: "essential-blocks/row", //helper block
   SHAPE_DIVIDER: "essential-blocks/shape-divider", //done
   SLIDER: "essential-blocks/slider", //done
   SOCIAL_SHARE: "essential-blocks/social-share", //done
-  SOCIAL: "essential-blocks/social",
-  TAB: "essential-blocks/tab",
-  TABLE_OF_CONTENTS: "essential-blocks/table-of-contents",
+  SOCIAL: "essential-blocks/social", //done
+  TAB: "essential-blocks/tab", //helper block
+  TABLE_OF_CONTENTS: "essential-blocks/table-of-contents", //done
   TEAM_MEMBER: "essential-blocks/team-member", //done
   TESTIMONIAL: "essential-blocks/testimonial", //done
   TOGGLE_CONTENT: "essential-blocks/toggle-content", //done
