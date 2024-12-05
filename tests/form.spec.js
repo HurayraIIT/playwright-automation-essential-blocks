@@ -113,7 +113,7 @@ test.describe("EB Form", () => {
         await collapseButton.click();
     }
 
-    await page1.locator("xpath=//div[normalize-space()='Essential Blocks']").hover();
+    await page1.getByRole('link', { name: 'Essential Blocks 1' }).hover();
     await page1.getByText("Form Responses").click();
 
     const form_response = await page1.locator(`#select-form-list option:has-text("${String(timestamp)}")`);
