@@ -52,7 +52,7 @@ const EB_Free_Blocks = Object.freeze({
   SOCIAL_SHARE: "essential-blocks/social-share", //done
   SOCIAL: "essential-blocks/social", //done
   TAB: "essential-blocks/tab", //helper block
-  TABLE_OF_CONTENTS: "essential-blocks/table-of-contents",
+  TABLE_OF_CONTENTS: "essential-blocks/table-of-contents", //done
   TEAM_MEMBER: "essential-blocks/team-member", //done
   TESTIMONIAL: "essential-blocks/testimonial", //done
   TOGGLE_CONTENT: "essential-blocks/toggle-content", //done
