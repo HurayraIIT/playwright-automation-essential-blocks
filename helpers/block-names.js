@@ -41,7 +41,7 @@ const EB_Free_Blocks = Object.freeze({
   OPENVERSE: "essential-blocks/openverse", //done
   PARALLAX_SLIDER: "essential-blocks/parallax-slider", //done
   POPUP: "essential-blocks/popup", //done
-  POST_CAROUSEL: "essential-blocks/post-carousel",
+  POST_CAROUSEL: "essential-blocks/post-carousel", //done
   POST_GRID: "essential-blocks/post-grid",
   PRICE: "essential-blocks/price",
   PRICING_TABLE: "essential-blocks/pricing-table", //done
