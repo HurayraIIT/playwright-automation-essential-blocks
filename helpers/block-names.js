@@ -40,7 +40,7 @@ const EB_Free_Blocks = Object.freeze({
   NUMBER_COUNTER: "essential-blocks/number-counter", //done
   OPENVERSE: "essential-blocks/openverse", //done
   PARALLAX_SLIDER: "essential-blocks/parallax-slider", //done
-  POPUP: "essential-blocks/popup",
+  POPUP: "essential-blocks/popup", //done
   POST_CAROUSEL: "essential-blocks/post-carousel",
   POST_GRID: "essential-blocks/post-grid",
   PRICE: "essential-blocks/price",
