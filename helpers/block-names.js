@@ -4,7 +4,7 @@
 // PRO BLOCKS: https://github.com/WPDevelopers/essential-blocks-pro/blob/main/src/blocks/advanced-search/block.json
 
 const EB_Free_Blocks = Object.freeze({
-  ACCORDION_ITEM: "essential-blocks/accordion-item",
+  ACCORDION_ITEM: "essential-blocks/accordion-item", //done
   ACCORDION: "essential-blocks/accordion", // done
   ADVANCED_HEADING: "essential-blocks/advanced-heading", //done
   ADVANCED_IMAGE: "essential-blocks/advanced-image", //done
@@ -35,12 +35,12 @@ const EB_Free_Blocks = Object.freeze({
   INFOBOX: "essential-blocks/infobox", //done
   INSTAGRAM_FEED: "essential-blocks/instagram-feed", //done
   INTERACTIVE_PROMO: "essential-blocks/interactive-promo", //done
-  NFT_GALLERY: "essential-blocks/nft-gallery",
+  NFT_GALLERY: "essential-blocks/nft-gallery", //done
   NOTICE: "essential-blocks/notice", //done
   NUMBER_COUNTER: "essential-blocks/number-counter", //done
   OPENVERSE: "essential-blocks/openverse", //done
   PARALLAX_SLIDER: "essential-blocks/parallax-slider", //done
-  POPUP: "essential-blocks/popup",
+  POPUP: "essential-blocks/popup", //done
   POST_CAROUSEL: "essential-blocks/post-carousel",
   POST_GRID: "essential-blocks/post-grid",
   PRICE: "essential-blocks/price",
