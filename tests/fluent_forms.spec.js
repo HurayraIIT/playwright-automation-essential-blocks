@@ -3,9 +3,9 @@ import { test, expect } from "@wordpress/e2e-test-utils-playwright";
 import { EB_Free_Blocks } from "../helpers/block-names";
 import generateTimestamp from "../helpers/generator";
 
-test.describe("EBFluent Form", () => {
-  test("can insert aFluent Form block", async ({ admin, editor, page }) => {
-    await admin.createNewPost({ postType: "post", title: `EBFluent Form ${generateTimestamp()}` });
+test.describe("EB Fluent Form", () => {
+  test("can insert a Fluent Form block", async ({ admin, editor, page }) => {
+    await admin.createNewPost({ postType: "post", title: `EB Fluent Form ${generateTimestamp()}` });
     await editor.insertBlock({ name: EB_Free_Blocks.FLUENT_FORMS });
 
     //checking block visibility in editor
@@ -32,7 +32,7 @@ test.describe("EBFluent Form", () => {
     const page1 = await page1Promise;
 
     //checking block visibility in post
-    await expect.soft(page1.locator('h1:has-text("EBFluent Form 2")')).toBeVisible();
+    await expect.soft(page1.locator('h1:has-text("EB Fluent Form 2")')).toBeVisible();
     await expect.soft(await page1.getByPlaceholder('First Name')).toBeVisible();
     await expect.soft(await page1.getByPlaceholder('Last Name')).toBeVisible();
     await expect.soft(await page1.getByPlaceholder('Email Address')).toBeVisible();
