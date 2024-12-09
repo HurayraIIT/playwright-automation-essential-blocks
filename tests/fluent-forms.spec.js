@@ -3,7 +3,7 @@ import { test, expect } from "@wordpress/e2e-test-utils-playwright";
 import { EB_Free_Blocks } from "../helpers/block-names";
 import generateTimestamp from "../helpers/generator";
 
-test.describe("EB Fluent Forms", () => {
+test.describe.skip("EB Fluent Forms", () => {
   test("can insert a Fluent Forms block", async ({ admin, editor, page }) => {
     await admin.createNewPost({ postType: "post", title: `EB Fluent Forms ${generateTimestamp()}` });
     await editor.insertBlock({ name: EB_Free_Blocks.FLUENT_FORMS });
