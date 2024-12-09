@@ -19,7 +19,7 @@ const EB_Free_Blocks = Object.freeze({
   DUAL_BUTTON: "essential-blocks/dual-button", //done
   FEATURE_LIST: "essential-blocks/feature-list", //done
   FLIPBOX: "essential-blocks/flipbox", //done
-  FLUENT_FORMS: "essential-blocks/fluent-forms",
+  FLUENT_FORMS: "essential-blocks/fluent-forms", //done need to do form submit
   FORM_CHECKBOX_FIELD: "essential-blocks/form-checkbox-field", //done
   FORM_EMAIL_FIELD: "essential-blocks/form-email-field", //done
   FORM_NUMBER_FIELD: "essential-blocks/form-number-field", //done
