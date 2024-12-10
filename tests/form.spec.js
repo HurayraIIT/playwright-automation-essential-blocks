@@ -2,6 +2,7 @@
 import { test, expect } from "@wordpress/e2e-test-utils-playwright";
 import { EB_Free_Blocks, EB_PRO_Blocks } from "../helpers/block-names";
 import generateTimestamp from "../helpers/generator";
+import { publishPostAndView } from "../helpers/post-publish-helper";
 import { time } from "console";
 
 test.describe("EB Form", () => {
@@ -61,15 +62,8 @@ test.describe("EB Form", () => {
     await expect.soft(page.getByLabel('Block: Radio Field').getByText('Field Title *Option 1Option')).toBeVisible();
 
     // Publish the post
-    await page.getByRole("button", { name: "Publish", exact: true }).click();
-    await page.getByRole("button", { name: "Save", exact: true }).waitFor();
-    await expect.soft(page.getByRole("button", { name: "Save", exact: true })).toBeVisible();
+    const page1 = await publishPostAndView(page);
 
-    // Open the post frontend
-    await expect.soft(page.getByLabel("View Post")).toBeVisible();
-    const page1Promise = page.waitForEvent("popup");
-    await page.getByLabel("View Post").click();
-    const page1 = await page1Promise;
 
     // Check frontend visibility
     await expect.soft(page1.getByPlaceholder('Enter your first name here...')).toBeVisible();
@@ -113,8 +107,8 @@ test.describe("EB Form", () => {
         await collapseButton.click();
     }
 
-    await page1.getByRole('link', { name: 'Essential Blocks 1' }).hover();
-    await page1.getByText("Form Responses").click();
+    await page1.goto(`https://eb-automation.qa1.site/wp-admin/admin.php?page=eb-form-responses`);
+
 
     const form_response = await page1.locator(`#select-form-list option:has-text("${String(timestamp)}")`);
     const form_response_value = await form_response.getAttribute('value');
