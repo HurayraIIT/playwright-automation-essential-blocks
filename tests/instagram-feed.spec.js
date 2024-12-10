@@ -2,6 +2,7 @@
 import { test, expect } from "@wordpress/e2e-test-utils-playwright";
 import { EB_Free_Blocks, EB_PRO_Blocks } from "../helpers/block-names";
 import generateTimestamp from "../helpers/generator";
+import { publishPostAndView } from "../helpers/post-publish-helper";
 
 test.describe("EB Instagram Feed", () => {
   test("can insert an Instagram Feed block", async ({ admin, editor, page }) => {
@@ -19,15 +20,8 @@ test.describe("EB Instagram Feed", () => {
     );
 
     // Publish the post
-    await page.getByRole("button", { name: "Publish", exact: true }).click();
-    await page.getByRole("button", { name: "Save", exact: true }).waitFor();
-    await expect.soft(page.getByRole("button", { name: "Save", exact: true })).toBeVisible();
+    const page1 = await publishPostAndView(page);
 
-    // Open the post frontend
-    await expect.soft(page.getByLabel("View Post")).toBeVisible();
-    const page1Promise = page.waitForEvent("popup");
-    await page.getByLabel("View Post").click();
-    const page1 = await page1Promise;
 
     // Check frontend visibility
   });

@@ -3,6 +3,7 @@ import { test, expect } from "@wordpress/e2e-test-utils-playwright";
 import { EB_Free_Blocks } from "../helpers/block-names";
 // import { clickIfAriaExpandedIsFalse } from '../helpers/buttonUtils';
 import generateTimestamp from "../helpers/generator";
+import { publishPostAndView } from "../helpers/post-publish-helper";
 
 test.describe("EB Advanced Heading", () => {
   test("can insert an Advanced Heading block", async ({ admin, editor, page }) => {
@@ -34,14 +35,7 @@ test.describe("EB Advanced Heading", () => {
     await page.getByLabel("Title Text").fill("EA Advanced Heading Test 20240930");
 
     // Publish the post
-    await page.getByRole("button", { name: "Publish", exact: true }).click();
-    await page.getByRole("button", { name: "Save", exact: true }).waitFor();
-    await expect.soft(page.getByRole("button", { name: "Save", exact: true })).toBeVisible();
-
-    await expect.soft(page.getByLabel("View Post")).toBeVisible();
-    const page1Promise = page.waitForEvent("popup");
-    await page.getByLabel("View Post").click();
-    const page1 = await page1Promise;
+    const page1 = await publishPostAndView(page);
     await expect.soft(page1.getByRole("heading", { name: "EA Advanced Heading Test 20240930" })).toBeVisible();
     await page1.getByRole("heading", { name: "EA Advanced Heading Test 20240930" }).click();
   });
