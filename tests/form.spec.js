@@ -113,8 +113,8 @@ test.describe("EB Form", () => {
         await collapseButton.click();
     }
 
-    await page1.getByRole('link', { name: 'Essential Blocks 1' }).hover();
-    await page1.getByText("Form Responses").click();
+    await page1.goto(`https://eb-automation.qa1.site/wp-admin/admin.php?page=eb-form-responses`);
+
 
     const form_response = await page1.locator(`#select-form-list option:has-text("${String(timestamp)}")`);
     const form_response_value = await form_response.getAttribute('value');
