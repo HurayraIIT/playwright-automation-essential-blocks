@@ -58,7 +58,7 @@ const EB_Free_Blocks = Object.freeze({
   TOGGLE_CONTENT: "essential-blocks/toggle-content", //done
   TYPING_TEXT: "essential-blocks/typing-text", //done
   WOO_PRODUCT_GRID: "essential-blocks/woo-product-grid", //done
-  WPFORMS: "essential-blocks/wpforms",
+  WPFORMS: "essential-blocks/wpforms", //done
   WRAPPER: "essential-blocks/wrapper", //done
 });
 
