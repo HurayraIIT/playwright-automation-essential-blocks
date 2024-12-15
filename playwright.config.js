@@ -11,7 +11,7 @@ export default defineConfig({
   globalTeardown: "./src/global-teardown",
 
   fullyParallel: true,
-  retries: process.env.CI ? 2 : 0,
+  retries: process.env.CI ? 1 : 0,
   workers: process.env.CI ? 1 : 1,
   timeout: 30 * 1000,
   actionTimeout: 10_000,
@@ -33,10 +33,9 @@ export default defineConfig({
               },
             ],
           },
-        ],
-        ["html"],
+        ]
       ]
-    : [["dot"], ["list"], ["html"]],
+    : [["dot"], ["list"]],
 
   use: {
     baseURL: process.env.WP_BASE_URL,
@@ -45,7 +44,7 @@ export default defineConfig({
 
     screenshot: "on",
     trace: "retain-on-failure",
-    video: "on-first-retry",
+    video: "retain-on-failure",
 
     ignoreHTTPSErrors: true,
     locale: "en-US",

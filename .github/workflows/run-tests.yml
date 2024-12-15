@@ -20,12 +20,12 @@ jobs:
           VPS_PASSWORD: ${{ secrets.VPS_PASSWORD }}
         run: |
           sshpass -p "$VPS_PASSWORD" ssh -o StrictHostKeyChecking=no $VPS_USERNAME@$VPS_IP << 'EOF'
+            set -e  # Exit immediately if any command fails
             cd /home/hurayra/playwright-automation-essential-blocks
-            git pull origin ismail
-            npm install
+            git pull origin ismail || { echo "Git pull failed"; exit 1; }
             npx playwright install --with-deps
             npx playwright test tests/advanced*
-            TIMESTAMP=$(date +%Y%m%d%H%M%S)
+            TIMESTAMP=$(date +%Y-%m-%d_%H-%M-%S)
             REPORT_DIR=/var/www/playwright-reports/$TIMESTAMP
             mkdir -p $REPORT_DIR
             cp -r playwright-report/* $REPORT_DIR
