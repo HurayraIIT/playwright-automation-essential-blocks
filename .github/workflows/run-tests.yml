@@ -22,7 +22,7 @@ jobs:
           sshpass -p "$VPS_PASSWORD" ssh -o StrictHostKeyChecking=no $VPS_USERNAME@$VPS_IP << 'EOF'
             cd /home/hurayra/playwright-automation-essential-blocks
             git pull origin ismail || { echo "Git pull failed"; exit 1; }
-            npx playwright test tests/advanced-accordion*
+            npx playwright test tests/accordion*
             TIMESTAMP=$(date +%Y-%m-%d_%H-%M-%S)
             REPORT_DIR=/var/www/playwright-reports/$TIMESTAMP
             mkdir -p $REPORT_DIR
