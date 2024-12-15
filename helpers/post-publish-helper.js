@@ -3,7 +3,6 @@ import { test, expect } from "@wordpress/e2e-test-utils-playwright";
 
 export async function publishPostAndView(page) {
     // Publish the post
-    await page.waitForTimeout(1500);
     await page.getByRole("button", { name: "Publish", exact: true }).click();
     await page.getByRole("button", { name: "Save", exact: true }).waitFor();
     await expect.soft(page.getByRole("button", { name: "Save", exact: true })).toBeVisible();
