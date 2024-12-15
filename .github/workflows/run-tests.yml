@@ -23,7 +23,6 @@ jobs:
             set -e  # Exit immediately if any command fails
             cd /home/hurayra/playwright-automation-essential-blocks
             git pull origin ismail || { echo "Git pull failed"; exit 1; }
-            npx playwright install --with-deps
             npx playwright test tests/advanced*
             TIMESTAMP=$(date +%Y-%m-%d_%H-%M-%S)
             REPORT_DIR=/var/www/playwright-reports/$TIMESTAMP
