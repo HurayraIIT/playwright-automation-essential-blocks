@@ -11,7 +11,7 @@ export default defineConfig({
   globalTeardown: "./src/global-teardown",
 
   fullyParallel: true,
-  retries: process.env.CI ? 1 : 0,
+  retries: process.env.CI ? 0 : 0,
   workers: process.env.CI ? 1 : 1,
   timeout: 30 * 1000,
   actionTimeout: 10_000,
