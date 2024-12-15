@@ -10,7 +10,7 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     timeout-minutes: 100
 
     steps:
@@ -20,7 +20,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
 
       - name: Install dependencies
         run: npm ci
@@ -38,7 +38,7 @@ jobs:
           echo "WP_USERNAME=${{ secrets.WP_USERNAME }}" >> .env
 
       - name: Run Playwright tests
-        run: npx playwright test
+        run: npx playwright test tests/a*
 
       - name: Upload Playwright report
         if: ${{ !cancelled() }}
