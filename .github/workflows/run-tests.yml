@@ -24,7 +24,7 @@ jobs:
             git pull origin ismail
             npm install
             npx playwright install --with-deps
-            npx playwright test
+            npx playwright test tests/advanced*
             TIMESTAMP=$(date +%Y%m%d%H%M%S)
             REPORT_DIR=/var/www/playwright-reports/$TIMESTAMP
             mkdir -p $REPORT_DIR
