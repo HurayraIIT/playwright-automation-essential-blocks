@@ -1,0 +1,32 @@
+name: Run Playwright Tests on VPS
+
+on:
+  push:
+    branches:
+      - ismail
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: SSH into VPS and Run Tests
+        env:
+          VPS_IP: ${{ secrets.VPS_IP }}
+          VPS_USERNAME: ${{ secrets.VPS_USERNAME }}
+          VPS_PASSWORD: ${{ secrets.VPS_PASSWORD }}
+        run: |
+          sshpass -p "$VPS_PASSWORD" ssh -o StrictHostKeyChecking=no $VPS_USERNAME@$VPS_IP << 'EOF'
+            cd /home/hurayra/playwright-automation-essential-blocks
+            git pull origin ismail
+            npm install
+            npx playwright install --with-deps
+            npx playwright test
+            TIMESTAMP=$(date +%Y%m%d%H%M%S)
+            REPORT_DIR=/var/www/playwright-reports/$TIMESTAMP
+            mkdir -p $REPORT_DIR
+            cp -r playwright-report/* $REPORT_DIR
+          EOF
