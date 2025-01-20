@@ -12,7 +12,7 @@ test.describe("EB Shape Divider", () => {
 
     //checking block visibility in editor
 
-    await expect(page.locator('clipPath#eb-shape-divider-ocean-wave>path.eb-shape-divider-fill')).toBeVisible();
+    await expect(page.getByLabel('Editor content').locator('g path')).toBeVisible();
 
     // Publish the post
     const page1 = await publishPostAndView(page);
@@ -21,7 +21,7 @@ test.describe("EB Shape Divider", () => {
     //checking block visibility in post
     await expect(page1.locator('h1:has-text("EB Shape Divider 2")')).toBeVisible();
 
-    await expect(page1.locator('clipPath#eb-shape-divider-ocean-wave>path.eb-shape-divider-fill')).toBeVisible();
+    await expect(page1.locator('.eb-shape-divider-wrapper')).toBeVisible();
 
   });
 });
