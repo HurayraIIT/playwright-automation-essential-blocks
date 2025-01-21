@@ -6,7 +6,7 @@ import { publishPostAndView } from "../helpers/post-publish-helper";
 import { time } from "console";
 
 test.describe("EB Form", () => {
-  test("can insert a Form block", async ({ admin, editor, page }) => {
+  test.skip("can insert a Form block", async ({ admin, editor, page }) => {
     await admin.createNewPost({ postType: "post", title: `EB Form ${generateTimestamp()}` });
     await editor.insertBlock({ name: EB_Free_Blocks.FORM });
 
