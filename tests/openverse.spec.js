@@ -6,6 +6,7 @@ import { publishPostAndView } from "../helpers/post-publish-helper";
 
 test.describe("EB Openverse", () => {
   test("can insert a Openverse block", async ({ admin, editor, page }) => {
+    await page.setViewportSize({ width: 1600, height: 1200 });
     await admin.createNewPost({ postType: "post", title: `EB Openverse ${generateTimestamp()}` });
     await editor.insertBlock({ name: EB_Free_Blocks.OPENVERSE });
 

@@ -10,12 +10,16 @@ test.describe("EB Image Gallery", () => {
     await editor.insertBlock({ name: EB_Free_Blocks.IMAGE_GALLERY });
 
     //start with media library
-    await expect.soft(page.getByRole("button", { name: "Media Library", exact: true })).toBeVisible();
-    await page.getByRole("button", { name: "Media Library" }).click()
+    await expect.soft(page.getByRole("button", { name: "Start Blank", exact: true })).toBeVisible();
+    await page.getByRole("button", { name: "Start Blank" }).click();
+    await page.getByLabel('Edit gallery').click();
+    await page.getByRole('tab', { name: 'Add to gallery' }).click();
+
+
 
     //inserting image from media library
     let image_elements = await page.locator('li.attachment.save-ready');
-    var count = 6;
+    var count = 2;
     for (let i = 0; i < count; i++) {
         const image_element = image_elements.nth(i);
         await expect.soft(image_element).toBeVisible();
@@ -25,15 +29,8 @@ test.describe("EB Image Gallery", () => {
         }
     }
 
-
-    await expect.soft(page.getByRole("button", { name: "Create a new gallery", exact: true })).toBeVisible();
-    await page.getByRole("button", { name: "Create a new gallery" }).click()
-
-    await expect.soft(page.getByRole("button", { name: "Insert gallery", exact: true })).toBeVisible();
-    await page.getByRole("button", { name: "Insert gallery" }).click()
-
-
-
+    await page.getByRole('button', { name: 'Add to gallery' }).click();
+    await page.getByRole('button', { name: 'Update gallery' }).click();
 
     // Publish the post
     const page1 = await publishPostAndView(page);
