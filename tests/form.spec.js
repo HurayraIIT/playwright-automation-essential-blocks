@@ -1,12 +1,19 @@
 "use strict";
-import { test, expect } from "@wordpress/e2e-test-utils-playwright";
+import { test as base, expect } from "@wordpress/e2e-test-utils-playwright";
 import { EB_Free_Blocks, EB_PRO_Blocks } from "../helpers/block-names";
 import generateTimestamp from "../helpers/generator";
 import { publishPostAndView } from "../helpers/post-publish-helper";
-import { time } from "console";
+import { chromium } from '@playwright/test';
+
+const test = base.extend({
+  browser: async ({}, use) => {
+    const browser = await chromium.launch();
+    await use(browser);
+  }
+});
 
 test.describe("EB Form", () => {
-  test.skip("can insert a Form block", async ({ admin, editor, page }) => {
+  test("can insert a Form block", async ({ admin, editor, page }) => {
     await admin.createNewPost({ postType: "post", title: `EB Form ${generateTimestamp()}` });
     await editor.insertBlock({ name: EB_Free_Blocks.FORM });
 
