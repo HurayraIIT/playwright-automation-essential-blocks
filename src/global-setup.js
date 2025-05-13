@@ -1,6 +1,6 @@
 import { request } from "@playwright/test";
 import { RequestUtils } from "@wordpress/e2e-test-utils-playwright";
-
+//test
 console.log("Global setup started.");
 export default async function globalSetup() {
   const requestContext = await request.newContext({
